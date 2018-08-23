@@ -12,6 +12,5 @@
     <arg name="limited" default="true"/>
   </include>
 
-  <node name="scene_python_interface" pkg="aidan_homunculus" type="URScenePublisher.py" output="screen"/>
-
+  <node name="scene_python_interface" pkg="aidan_homunculus" type="URScenePublisher.py" args="$" output="screen"/>
 </launch>
