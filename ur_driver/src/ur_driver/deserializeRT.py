@@ -450,7 +450,7 @@ class RobotStateRT_V35(object):
             print("MessageSize: ", message_size, "; BufferSize: ", len(buf))
             raise Exception("Could not unpack RobotStateRT packet: length field is incorrect")
 
-        print("Message received for V35")
+        #print("Message received for V35")
 
         rs = RobotStateRT_V35()
         # time: 1x double (1x 8byte)

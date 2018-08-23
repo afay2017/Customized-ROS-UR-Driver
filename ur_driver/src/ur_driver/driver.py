@@ -366,7 +366,7 @@ class URConnectionRT(object):
                     while len(self.__buf) >= 48:
                         # Attempts to extract a packet
                         packet_length = struct.unpack_from("!i", self.__buf)[0]
-                        print("PacketLength: ", packet_length, "; BufferSize: ", len(self.__buf))
+                        #print("PacketLength: ", packet_length, "; BufferSize: ", len(self.__buf))
                         if len(self.__buf) >= packet_length:
                             packet, self.__buf = self.__buf[:packet_length], self.__buf[packet_length:]
                             self.__on_packet(packet)

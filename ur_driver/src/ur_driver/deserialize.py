@@ -321,6 +321,7 @@ class RobotState(object):
             if mtype == 20:
                 print "Likely a syntax error:"
                 print buf[:2048]
+            print ("Message type:{}".format(mtype))
             raise Exception("Fatal error when unpacking RobotState packet")
 
         rs = RobotState()

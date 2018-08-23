@@ -1,0 +1,14 @@
+<launch>
+  <!-- ****************************
+    PLANNING
+   **************************** -->
+  <include file="$(find moveit_planner)/launch/moveit_UR5.launch"/>
+
+
+
+  <!-- ****************************
+    CHOOSE PROGRAM TO RUN
+   **************************** -->
+  <node name="test_moveit" pkg="aidan_homunculus" type="testMoveItUR.py" output="screen"/>
+
+</launch>

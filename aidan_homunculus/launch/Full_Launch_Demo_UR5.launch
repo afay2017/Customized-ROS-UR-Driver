@@ -1,0 +1,17 @@
+<launch>
+
+  <arg name="robot_ip" doc="IP of the controller" />
+
+  <include file="$(find ur_bringup)/launch/ur5_bringup_joint_limited.launch">
+    <arg name="robot_ip" value="$(arg robot_ip)"/>
+  </include>
+
+  <include file="$(find aidan_homunculus)/launch/test_moveit_UR5.launch"/>
+
+  <include file="$(find ur5_moveit_config)/launch/ur5_moveit_planning_execution.launch">
+    <arg name="limited" default="true"/>
+  </include>
+
+  <node name="scene_python_interface" pkg="aidan_homunculus" type="URScenePublisher.py" output="screen"/>
+
+</launch>
